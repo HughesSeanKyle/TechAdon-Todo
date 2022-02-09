@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import _ from 'lodash';
+
 import ShowTodo from './ShowTodo';
 
 const Input = () => {
+	console.log(_);
+
 	// State - (Pass this state to ShowTodos as props for mapping)
 	// Set as empty string by default
 	const [todo, setTodo] = useState('');
@@ -20,6 +24,12 @@ const Input = () => {
 		console.log(todo);
 		setTodos((todos) => [...todos, todo]);
 		console.log('Your todo has been submitted');
+	};
+
+	const handleDeleteTodo = (id) => {
+		console.log(id);
+		setTodos(todos.filter((todo, idx) => idx !== id));
+		console.log(todos);
 	};
 
 	// Apply useEffect to update the component once todoS state is updated
@@ -60,7 +70,7 @@ const Input = () => {
 					+
 				</button>
 			</form>
-			<ShowTodo todos={todos} />
+			<ShowTodo todos={todos} handleDeleteTodo={handleDeleteTodo} />
 		</div>
 	);
 };
