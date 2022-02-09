@@ -3,12 +3,37 @@ import React from 'react';
 const ShowTodo = () => {
 	return (
 		<div className="container-fluid pt-5">
-			<ul className="list-group mb-3 px-5">
-				<li className="list-group-item">An item</li>
-				<li className="list-group-item">A second item</li>
-				<li className="list-group-item">A third item</li>
-				<li className="list-group-item">A fourth item</li>
-				<li className="list-group-item">And a fifth one</li>
+			<ul className="list-group mb-2 px-5">
+				<li className="list-group-item">
+					<p className="float-start text-center">A Todo Item</p>
+					<button className="btn btn-danger float-end" title="Remove Todo">
+						-
+					</button>
+				</li>
+				<li className="list-group-item">
+					<p className="float-start text-center">A Todo Item</p>
+					<button className="btn btn-danger float-end" title="Remove Todo">
+						-
+					</button>
+				</li>
+				<li className="list-group-item">
+					<p className="float-start text-center">A Todo Item</p>
+					<button className="btn btn-danger float-end" title="Remove Todo">
+						-
+					</button>
+				</li>
+				<li className="list-group-item">
+					<p className="float-start text-center">A Todo Item</p>
+					<button className="btn btn-danger float-end" title="Remove Todo">
+						-
+					</button>
+				</li>
+				<li className="list-group-item">
+					<p className="float-start text-center">A Todo Item</p>
+					<button className="btn btn-danger float-end" title="Remove Todo">
+						-
+					</button>
+				</li>
 			</ul>
 		</div>
 	);
