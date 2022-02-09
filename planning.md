@@ -29,6 +29,8 @@
                         - - use index as id for react key requirement
                 - - Helper Functions? 
                     - - Yes
+                        - - `RenderList`
+                            - - Use Map function here 
                         - - `onDelete` 
                             - - Delete a Todo
                                 - - Use the id (index) as ref to remove from array  

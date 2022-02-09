@@ -60,7 +60,7 @@ const Input = () => {
 					+
 				</button>
 			</form>
-			<ShowTodo />
+			<ShowTodo todos={todos} />
 		</div>
 	);
 };
