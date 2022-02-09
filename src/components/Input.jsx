@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import ShowTodo from './ShowTodo';
 
 const Input = () => {
 	// State - (Pass this state to ShowTodos as props for mapping)
@@ -22,6 +23,7 @@ const Input = () => {
 	};
 
 	// Apply useEffect to update the component once todoS state is updated
+	// - - NOTE: useEffect will run on initial load as well
 	// - - Use useEffect cleanup to reset todo state so input val can be "" again
 	useEffect(() => {
 		console.log('I run everytime my condition is changed');
@@ -58,6 +60,7 @@ const Input = () => {
 					+
 				</button>
 			</form>
+			<ShowTodo />
 		</div>
 	);
 };
