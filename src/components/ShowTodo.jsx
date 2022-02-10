@@ -7,7 +7,7 @@ const ShowTodo = (props) => {
 	// Helper function to render Todo as li
 	const renderTodo = todos.map((todo, idx) => (
 		<li key={idx} className="list-group-item">
-			<p className="float-start text-center">{todo}</p>
+			<p className="float-start text-center text-break">{todo}</p>
 			<button
 				onClick={() => handleDeleteTodo(idx)}
 				className="btn btn-danger float-end"
