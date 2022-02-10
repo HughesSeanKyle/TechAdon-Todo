@@ -41,3 +41,12 @@
                         - - Pass the Todo array from the Input comp as Props 
                             - - to ShowTodo component
                                 - - then map over it into an li  
+
+- - `NOTES`
+    - - Have the remove todo inside the input comp 
+        - - pass that function down as a prop and use like that
+
+    - - `10/02/2022`
+        - - `Resource`
+            - - [https://youtu.be/74ThcF5JqzU]
+        - - Understand this custom hook and apply it to your project 

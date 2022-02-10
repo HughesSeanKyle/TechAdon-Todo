@@ -1,16 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import _ from 'lodash';
 
 import ShowTodo from './ShowTodo';
 
 const Input = () => {
-	console.log(_);
+	// helper function for getting the todos from local storage
+	const getDataFromLocalStorage = () => {
+		const data = localStorage.getItem('todos');
+		if (data) {
+			return JSON.parse(data);
+		} else {
+			return [];
+		}
+	};
 
 	// State - (Pass this state to ShowTodos as props for mapping)
 	// Set as empty string by default
 	const [todo, setTodo] = useState('');
 	// Set as empty array by default (State to hold all Todos - Will eventually be localStorage)
-	const [todos, setTodos] = useState([]);
+	const [todos, setTodos] = useState(getDataFromLocalStorage);
 
 	// Helper function to update todo state
 	const handleChange = (e) => {
@@ -21,24 +28,22 @@ const Input = () => {
 	// - - OnSubmit be sure to revert todo back to empty string
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		console.log(todo);
 		setTodos((todos) => [...todos, todo]);
-		console.log('Your todo has been submitted');
+		// localStorage.setItem('todos', JSON.stringify(todos));
+		// let storedTodos = JSON.parse(localStorage.getItem('todos'));
+		// setTodos(storedTodos);
 	};
 
+	// Helper function to deleteTodo => Pass down as props
 	const handleDeleteTodo = (id) => {
-		console.log(id);
 		setTodos(todos.filter((todo, idx) => idx !== id));
-		console.log(todos);
 	};
 
 	// Apply useEffect to update the component once todoS state is updated
 	// - - NOTE: useEffect will run on initial load as well
 	// - - Use useEffect cleanup to reset todo state so input val can be "" again
 	useEffect(() => {
-		console.log('I run everytime my condition is changed');
-
-		console.log(todos);
+		localStorage.setItem('todos', JSON.stringify(todos));
 
 		return () => {
 			setTodo('');
