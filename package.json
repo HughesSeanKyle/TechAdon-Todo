@@ -2,7 +2,7 @@
   "name": "techadon-todo",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://HughesSeanKyle.github.io/TechAdon-Todo",
+  "homepage": "http://HughesSeanKyle.github.io/TechAdon-Todo",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.2",
