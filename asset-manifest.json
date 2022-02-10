@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/techadon-todo-deploy-gh-pages/static/css/main.964fdded.css",
+    "main.js": "/techadon-todo-deploy-gh-pages/static/js/main.2e7c6860.js",
+    "index.html": "/techadon-todo-deploy-gh-pages/index.html",
+    "main.964fdded.css.map": "/techadon-todo-deploy-gh-pages/static/css/main.964fdded.css.map",
+    "main.2e7c6860.js.map": "/techadon-todo-deploy-gh-pages/static/js/main.2e7c6860.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.964fdded.css",
+    "static/js/main.2e7c6860.js"
+  ]
+}
